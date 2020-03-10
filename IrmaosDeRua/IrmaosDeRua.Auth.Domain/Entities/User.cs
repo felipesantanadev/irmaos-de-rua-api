@@ -20,7 +20,7 @@ namespace IrmaosDeRua.Auth.Domain.Entities
         public User(Email email, PhoneNumber phoneNumber, string firstName, string lastName, 
                     short genre, DateTime birthDay, bool hasVehicle)
         {
-            Email = email.Value;
+            UserName = Email = email.Value;
             FirstName = firstName ?? throw new ArgumentException("The first name can't be empty.");
             LastName = lastName ?? throw new ArgumentException("The last name can't be empty.");
             PhoneNumber = phoneNumber.Value;
