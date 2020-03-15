@@ -1,0 +1,9 @@
+﻿# How to make migrations from different bounded contexts
+
+# From the project where the context is in
+dotnet ef migrations add Initial -s ..\IrmaosDeRua.API -p . -c IrmaosDeRua.Auth.Data.Context.AuthDbContext
+
+dotnet ef database update -s ..\IrmaosDeRua.API -p .
+
+# EF Tools Commands
+https://www.entityframeworktutorial.net/efcore/cli-commands-for-ef-core-migration.aspx
